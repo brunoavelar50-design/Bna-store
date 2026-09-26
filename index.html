@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNA Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">FRETE GRÁTIS A PARTIR DE R$ 299 • PAGAMENTO SEGURO</div>
+    <div class="nav">
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <a class="logo" href="#">BNA<span>STORE</span></a>
+      <nav class="desktop-nav">
+        <a href="#produtos">Todos</a>
+        <a href="#roupas">Roupas</a>
+        <a href="#tenis">Tênis</a>
+        <a href="#bones">Bonés</a>
+        <a href="#chinelos">Chinelos</a>
+        <a href="#agasalhos">Agasalhos</a>
+      </nav>
+      <div class="actions">
+        <button aria-label="Pesquisar" id="searchBtn">⌕</button>
+        <button aria-label="Carrinho" id="cartBtn">🛒 <b id="cartCount">0</b></button>
+      </div>
+    </div>
+    <div class="searchbar" id="searchbar">
+      <input id="searchInput" placeholder="Buscar produtos..." autocomplete="off">
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#produtos">Todos</a><a href="#roupas">Roupas</a><a href="#tenis">Tênis</a>
+      <a href="#bones">Bonés</a><a href="#chinelos">Chinelos</a><a href="#agasalhos">Agasalhos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BNA STORE</p>
+        <h1>Seu estilo.<br><span>Seu preço.</span></h1>
+        <p>Peças selecionadas para quem gosta de vestir bem sem pagar caro.</p>
+        <a href="#produtos" class="primary">COMPRAR AGORA</a>
+      </div>
+      <div class="hero-art"><div class="art-card">BNA<br><small>STORE</small></div></div>
+    </section>
+
+    <section class="categories">
+      <a href="#roupas"><span>👕</span> Roupas</a>
+      <a href="#tenis"><span>👟</span> Tênis</a>
+      <a href="#bones"><span>🧢</span> Bonés</a>
+      <a href="#chinelos"><span>🩴</span> Chinelos</a>
+      <a href="#agasalhos"><span>🧥</span> Agasalhos</a>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-head">
+        <div><p class="eyebrow">CATÁLOGO</p><h2>Produtos em destaque</h2></div>
+        <select id="sortSelect">
+          <option value="featured">Mais relevantes</option>
+          <option value="low">Menor preço</option>
+          <option value="high">Maior preço</option>
+        </select>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-category="Todos">Todos</button>
+        <button class="filter" data-category="Roupas">Roupas</button>
+        <button class="filter" data-category="Tênis">Tênis</button>
+        <button class="filter" data-category="Bonés">Bonés</button>
+        <button class="filter" data-category="Chinelos">Chinelos</button>
+        <button class="filter" data-category="Agasalhos">Agasalhos</button>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section class="benefits">
+      <div><strong>🚚 Envio rápido</strong><span>Postagem ágil para todo o Brasil</span></div>
+      <div><strong>🔒 Compra segura</strong><span>Seus dados protegidos</span></div>
+      <div><strong>💬 Atendimento</strong><span>Fale com a BNA Store</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <div><a class="logo" href="#">BNA<span>STORE</span></a><p>Estilo acessível para todos.</p></div>
+    <div><h4>Atendimento</h4><p>Segunda a sexta<br>09h às 18h</p></div>
+    <div><h4>Institucional</h4><a href="#">Sobre nós</a><a href="#">Política de privacidade</a><a href="#">Trocas e devoluções</a></div>
+    <div><h4>Redes sociais</h4><p>Instagram • TikTok</p></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart">
+    <div class="cart-head"><h3>Seu carrinho</h3><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Seu carrinho está vazio.</p></div>
+    <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div><button class="primary full">FINALIZAR COMPRA</button></div>
+  </aside>
+
+  <div class="modal" id="productModal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
